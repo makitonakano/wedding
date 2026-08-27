@@ -47,15 +47,12 @@ body{
 
 .botanical{
   position:absolute;
-  width:clamp(190px,54vw,340px);
   pointer-events:none;
+  user-select:none;
   z-index:0;
-  opacity:.8;
 }
-.botanical--tl{top:-6px;left:-12px}
-.botanical--br{bottom:-6px;right:-12px;transform:rotate(180deg)}
-.botanical--mid{top:38%;right:-64px;width:clamp(120px,30vw,200px);opacity:.5;transform:rotate(150deg)}
-
+.botanical--tl{top:0;left:0;width:clamp(150px,40vw,250px)}
+.botanical--br{bottom:0;right:0;width:clamp(86px,23vw,140px)}
 .hero{
   position:relative;
   min-height:min(62svh,480px);
@@ -259,50 +256,6 @@ footer .ornament{margin:0 auto 14px;width:80px}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <g id="branch">
-      <path d="M0 0 C 26 -4, 56 -18, 88 -46" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-      <g fill="currentColor" fill-opacity=".5">
-        <ellipse cx="14" cy="-6" rx="9" ry="3.6" transform="rotate(-16 14 -6)"/>
-        <ellipse cx="17" cy="1" rx="9" ry="3.6" transform="rotate(20 17 1)"/>
-        <ellipse cx="34" cy="-13" rx="9" ry="3.6" transform="rotate(-24 34 -13)"/>
-        <ellipse cx="37" cy="-6" rx="9" ry="3.6" transform="rotate(12 37 -6)"/>
-        <ellipse cx="54" cy="-23" rx="8" ry="3.2" transform="rotate(-32 54 -23)"/>
-        <ellipse cx="57" cy="-16" rx="8" ry="3.2" transform="rotate(4 57 -16)"/>
-        <ellipse cx="72" cy="-35" rx="7" ry="2.8" transform="rotate(-40 72 -35)"/>
-        <ellipse cx="75" cy="-28" rx="7" ry="2.8" transform="rotate(-2 75 -28)"/>
-        <ellipse cx="87" cy="-47" rx="6" ry="2.4" transform="rotate(-46 87 -47)"/>
-      </g>
-    </g>
-    <g id="bloom">
-      <g fill="currentColor" fill-opacity=".5">
-        <ellipse rx="13" ry="20" cy="-16"/>
-        <ellipse rx="13" ry="20" cy="-16" transform="rotate(72)"/>
-        <ellipse rx="13" ry="20" cy="-16" transform="rotate(144)"/>
-        <ellipse rx="13" ry="20" cy="-16" transform="rotate(216)"/>
-        <ellipse rx="13" ry="20" cy="-16" transform="rotate(288)"/>
-      </g>
-      <circle r="5.5" fill="currentColor" fill-opacity=".9"/>
-    </g>
-    <g id="cluster">
-      <g transform="translate(20,26)">
-        <g color="#a9b8a0">
-          <use href="#branch" transform="rotate(35) scale(1.5)"/>
-          <use href="#branch" transform="rotate(65) scale(1.3)"/>
-          <use href="#branch" transform="rotate(22) scale(1.15)"/>
-          <use href="#branch" transform="rotate(92) scale(1.05)"/>
-        </g>
-        <g color="#cad6c0">
-          <use href="#branch" transform="rotate(48) scale(1.85)"/>
-          <use href="#branch" transform="rotate(78) scale(1.55)"/>
-          <use href="#branch" transform="rotate(108) scale(1.1)"/>
-        </g>
-        <g color="#ecc7b5">
-          <use href="#bloom" transform="translate(52,62) scale(1.4)"/>
-          <use href="#bloom" transform="translate(132,34) scale(.85)"/>
-          <use href="#bloom" transform="translate(30,132) scale(.72)"/>
-        </g>
-      </g>
-    </g>
     <g id="sprigmini">
       <path d="M60 14 C 46 14, 34 10, 22 3" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
       <path d="M60 14 C 74 14, 86 10, 98 3" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
@@ -317,15 +270,8 @@ footer .ornament{margin:0 auto 14px;width:80px}
   </defs>
 </svg>
 
-<div class="botanical botanical--tl" aria-hidden="true">
-  <svg viewBox="0 0 250 250"><use href="#cluster"/></svg>
-</div>
-<div class="botanical botanical--mid" aria-hidden="true">
-  <svg viewBox="0 0 250 250"><use href="#cluster"/></svg>
-</div>
-<div class="botanical botanical--br" aria-hidden="true">
-  <svg viewBox="0 0 250 250"><use href="#cluster"/></svg>
-</div>
+<img class="botanical botanical--tl" src="botanical-tl.png" alt="" aria-hidden="true">
+<img class="botanical botanical--br" src="botanical-br.png" alt="" aria-hidden="true">
 
 <header class="hero">
   <div class="arch" aria-hidden="true"></div>
