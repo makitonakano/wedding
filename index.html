@@ -7,17 +7,17 @@
 <title>結婚式のご案内 | 中野真喜人・リリス オクタヴィナ シナガ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#1e2a44;
-  --navy-soft:#3d4a68;
-  --peach:#e8b4a0;
-  --peach-pale:#f7e6df;
-  --paper:#fbf8f5;
-  --line:#e2d9d2;
-  --ink:#2f2b28;
-  --ink-soft:#6b625c;
+  --navy:#16233f;
+  --accent:#b06a4f;
+  --peach-pale:#f7e4dc;
+  --paper:#fcfaf8;
+  --panel:#f4ede8;
+  --line:#ddd0c8;
+  --ink:#1f1b18;
+  --ink-soft:#4a423c;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -25,226 +25,195 @@ body{
   background:var(--paper);
   color:var(--ink);
   font-family:"Shippori Mincho","Hiragino Mincho ProN",serif;
-  font-weight:400;
-  line-height:2;
-  letter-spacing:.04em;
+  font-weight:500;
+  font-size:16px;
+  line-height:1.85;
+  letter-spacing:.02em;
   -webkit-font-smoothing:antialiased;
 }
-.en{font-family:"Cormorant Garamond",serif;letter-spacing:.14em;font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
-.wrap{width:min(680px,90vw);margin-inline:auto}
+.en{
+  font-family:"Cormorant Garamond",serif;
+  letter-spacing:.1em;
+  font-variant-numeric:lining-nums;
+  font-feature-settings:"lnum" 1;
+}
+.wrap{width:min(600px,88vw);margin-inline:auto}
 
 .hero{
-  min-height:100svh;
+  min-height:min(74svh,560px);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:64px 0;
-  position:relative;
+  padding:52px 0 44px;
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, var(--peach-pale), transparent 70%),
+    radial-gradient(ellipse 90% 55% at 50% 0%, var(--peach-pale), transparent 72%),
     var(--paper);
 }
 .hero__label{
-  font-size:.72rem;
-  letter-spacing:.4em;
-  color:var(--peach);
+  font-size:.7rem;
+  letter-spacing:.34em;
+  color:var(--accent);
   text-transform:uppercase;
-  margin-bottom:40px;
-}
-.hero__names{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:14px;
+  margin-bottom:26px;
 }
 .hero__name{
-  font-size:clamp(1.9rem,7vw,3rem);
-  font-weight:300;
-  color:var(--navy);
-  line-height:1.2;
-}
-.hero__amp{
-  font-size:clamp(1.4rem,5vw,2rem);
-  color:var(--peach);
-  font-style:italic;
-}
-.hero__ja{
-  margin-top:26px;
-  font-size:.92rem;
-  color:var(--ink-soft);
-  line-height:2.1;
-}
-.hero__rule{
-  width:1px;
-  height:56px;
-  background:var(--line);
-  margin:40px auto 32px;
-}
-.hero__date{
-  font-size:clamp(1.5rem,6vw,2.2rem);
-  font-weight:300;
-  color:var(--navy);
-}
-.hero__day{
-  margin-top:10px;
-  font-size:.8rem;
-  letter-spacing:.28em;
-  color:var(--ink-soft);
-}
-
-section{padding:76px 0}
-.sec{border-top:1px solid var(--line)}
-.sec__head{
-  text-align:center;
-  margin-bottom:46px;
-}
-.sec__en{
   display:block;
-  font-size:.68rem;
-  letter-spacing:.36em;
-  color:var(--peach);
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-.sec__ja{
-  font-size:1.12rem;
+  font-size:clamp(1.7rem,6.4vw,2.5rem);
   font-weight:500;
   color:var(--navy);
-  letter-spacing:.14em;
+  line-height:1.25;
 }
-
-.greeting p{
-  font-size:.96rem;
-  line-height:2.4;
-  margin-bottom:1.6em;
+.hero__amp{
+  display:block;
+  font-size:1.2rem;
+  color:var(--accent);
+  margin:4px 0;
 }
-.greeting p:last-child{margin-bottom:0}
-.greeting__sign{
-  margin-top:48px;
-  text-align:right;
-  font-size:.94rem;
-  color:var(--navy);
-  line-height:2.2;
-}
-
-.detail{
-  border-top:1px solid var(--line);
-  padding:26px 0;
-}
-.detail:last-of-type{border-bottom:1px solid var(--line)}
-.detail__label{
-  font-size:.72rem;
-  letter-spacing:.24em;
-  color:var(--peach);
-  margin-bottom:12px;
-}
-.detail__body{
-  font-size:.96rem;
-  line-height:2.1;
-}
-.detail__body strong{
-  font-weight:600;
-  color:var(--navy);
-  font-size:1.06rem;
-}
-.detail__note{
-  margin-top:8px;
-  font-size:.84rem;
+.hero__ja{
+  margin-top:16px;
+  font-size:.88rem;
   color:var(--ink-soft);
   line-height:1.9;
 }
-.maplink{
-  display:inline-block;
-  margin-top:14px;
-  font-size:.82rem;
-  letter-spacing:.1em;
+.hero__date{
+  margin-top:30px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+  font-size:clamp(1.35rem,5.4vw,1.8rem);
   color:var(--navy);
-  text-decoration:none;
-  border-bottom:1px solid var(--peach);
-  padding-bottom:3px;
 }
-
-.notes{background:#f6f0ec}
-.note{
-  padding:30px 0;
-  border-bottom:1px solid var(--line);
-}
-.note:last-child{border-bottom:none}
-.note__title{
-  font-size:.98rem;
-  font-weight:600;
-  color:var(--navy);
-  margin-bottom:12px;
-}
-.note__text{
-  font-size:.9rem;
-  line-height:2.1;
+.hero__day{
+  font-size:.72rem;
+  letter-spacing:.26em;
   color:var(--ink-soft);
 }
 
-.rsvp{text-align:center}
-.rsvp__lead{
-  font-size:.94rem;
-  line-height:2.2;
-  margin-bottom:14px;
+section{padding:52px 0;border-top:1px solid var(--line)}
+.sec__head{
+  text-align:center;
+  margin-bottom:30px;
 }
+.sec__en{
+  display:block;
+  font-size:.66rem;
+  letter-spacing:.3em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.sec__ja{
+  font-size:1.05rem;
+  font-weight:600;
+  color:var(--navy);
+  letter-spacing:.1em;
+}
+
+.greeting p{font-size:.95rem;line-height:2.05}
+.greeting p + p{margin-top:1.1em}
+.greeting__sign{
+  margin-top:26px;
+  text-align:right;
+  color:var(--navy);
+  font-weight:600;
+}
+
+.info{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:0 22px;
+  align-items:baseline;
+}
+.info dt{
+  font-size:.74rem;
+  letter-spacing:.16em;
+  color:var(--accent);
+  padding:14px 0;
+  border-top:1px solid var(--line);
+  white-space:nowrap;
+}
+.info dd{
+  padding:14px 0;
+  border-top:1px solid var(--line);
+  font-size:.94rem;
+  line-height:1.8;
+}
+.info dt:first-of-type,.info dd:first-of-type{border-top:none;padding-top:0}
+.info strong{
+  display:block;
+  font-weight:600;
+  color:var(--navy);
+  font-size:1.02rem;
+}
+.info small{
+  display:block;
+  font-size:.84rem;
+  color:var(--ink-soft);
+  line-height:1.75;
+}
+.maplink{
+  display:inline-block;
+  margin-top:6px;
+  font-size:.82rem;
+  color:var(--navy);
+  text-decoration:none;
+  border-bottom:1px solid var(--accent);
+}
+
+.notes{background:var(--panel)}
+.notes ul{list-style:none}
+.notes li{
+  font-size:.9rem;
+  line-height:1.9;
+  color:var(--ink-soft);
+  padding-left:1.1em;
+  position:relative;
+}
+.notes li + li{margin-top:14px}
+.notes li::before{
+  content:"−";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+}
+.notes b{color:var(--navy);font-weight:600}
+
+.rsvp{text-align:center}
 .rsvp__deadline{
   display:inline-block;
-  margin-bottom:44px;
-  padding:10px 26px;
-  border:1px solid var(--peach);
-  border-radius:2px;
-  font-size:.9rem;
-  letter-spacing:.1em;
+  margin-bottom:26px;
+  padding:8px 20px;
+  border:1px solid var(--accent);
+  font-size:.86rem;
   color:var(--navy);
 }
 .rsvp__frame{
-  width:100%;
   border:1px solid var(--line);
-  border-radius:2px;
   background:#fff;
   overflow:hidden;
 }
-.rsvp__frame iframe{
-  display:block;
-  width:100%;
-  border:0;
-}
+.rsvp__frame iframe{display:block;width:100%;border:0}
 .rsvp__placeholder{
-  padding:70px 24px;
+  padding:48px 20px;
   color:var(--ink-soft);
-  font-size:.9rem;
-  line-height:2;
+  font-size:.88rem;
 }
 
 footer{
   border-top:1px solid var(--line);
-  padding:56px 0 72px;
+  padding:36px 0 44px;
   text-align:center;
 }
 .footer__names{
-  font-size:1.4rem;
-  font-weight:300;
+  font-size:1.2rem;
   color:var(--navy);
-  margin-bottom:16px;
+  margin-bottom:8px;
 }
-.footer__text{
-  font-size:.84rem;
-  color:var(--ink-soft);
-  line-height:2.1;
-}
+.footer__text{font-size:.84rem;color:var(--ink-soft);line-height:1.9}
 
-.reveal{
-  opacity:0;
-  transform:translateY(20px);
-  transition:opacity 1s ease,transform 1s ease;
-}
-.reveal.is-in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  html{scroll-behavior:auto}
+@media (min-width:560px){
+  .info{grid-template-columns:96px 1fr}
 }
 </style>
 </head>
@@ -253,102 +222,72 @@ footer{
 <header class="hero">
   <div class="wrap">
     <p class="hero__label en">Wedding Invitation</p>
-    <div class="hero__names">
+    <p>
       <span class="hero__name en">Makito Nakano</span>
       <span class="hero__amp en">&amp;</span>
       <span class="hero__name en">Lilis Oktavina Sinaga</span>
-    </div>
-    <p class="hero__ja">中野 真喜人<br>リリス オクタヴィナ シナガ</p>
-    <div class="hero__rule"></div>
-    <p class="hero__date en">2026 . 10 . 10</p>
-    <p class="hero__day en">Saturday</p>
+    </p>
+    <p class="hero__ja">中野 真喜人　・　リリス オクタヴィナ シナガ</p>
+    <p class="hero__date en">2026 . 10 . 10<br><span class="hero__day en">Saturday</span></p>
   </div>
 </header>
 
-
-<section class="sec">
-  <div class="wrap reveal">
-    <div class="sec__head">
-      <span class="sec__en">Greeting</span>
-      <h2 class="sec__ja">ご挨拶</h2>
-    </div>
-    <div class="greeting">
-      <p>主の御名を賛美いたします。</p>
-      <p>このたび わたしたちは<br>2026年10月10日（土）に<br>結婚式を挙げる運びとなりました。</p>
-      <p>これまでお祈りとお支えをいただきましたこと<br>心より感謝申し上げます。</p>
-      <p>ささやかな式ではございますが<br>ぜひご列席いただきたく<br>ご案内申し上げます。</p>
-      <p class="greeting__sign">中野 真喜人<br>リリス オクタヴィナ シナガ</p>
-    </div>
+<section>
+  <div class="wrap greeting">
+    <p>主の御名を賛美いたします。</p>
+    <p>このたび、2026年10月10日（土）に結婚式を挙げる運びとなりました。これまでお祈りとお支えをいただきましたこと、心より感謝申し上げます。ささやかな式ではございますが、ぜひご列席いただきたく、ご案内申し上げます。</p>
+    <p class="greeting__sign">中野 真喜人　／　リリス オクタヴィナ シナガ</p>
   </div>
 </section>
 
-<section class="sec">
-  <div class="wrap reveal">
+<section>
+  <div class="wrap">
     <div class="sec__head">
       <span class="sec__en">Information</span>
-      <h2 class="sec__ja">日時と会場</h2>
+      <h2 class="sec__ja">ご案内</h2>
     </div>
+    <dl class="info">
+      <dt class="en">Date</dt>
+      <dd>
+        <strong>2026年10月10日（土）</strong>
+        <small>受付 9:30 ／ 開式 10:00</small>
+      </dd>
 
-    <div class="detail">
-      <p class="detail__label en">Date</p>
-      <p class="detail__body"><strong>2026年10月10日（土）</strong></p>
-      <p class="detail__note">受付　9時30分<br>開式　10時00分</p>
-    </div>
+      <dt class="en">Venue</dt>
+      <dd>
+        <strong>インドネシア福音教会（GIII）南茨城</strong>
+        <small>茨城県常総市水海道高野町430</small>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%B8%B8%E7%B7%8F%E5%B8%82%E6%B0%B4%E6%B5%B7%E9%81%93%E9%AB%98%E9%87%8E%E7%94%BA430" target="_blank" rel="noopener">地図を開く</a>
+      </dd>
 
-    <div class="detail">
-      <p class="detail__label en">Venue</p>
-      <p class="detail__body"><strong>インドネシア福音教会（GIII）南茨城</strong></p>
-      <p class="detail__note">〒303-0033　茨城県常総市水海道高野町430</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%B8%B8%E7%B7%8F%E5%B8%82%E6%B0%B4%E6%B5%B7%E9%81%93%E9%AB%98%E9%87%8E%E7%94%BA430" target="_blank" rel="noopener">地図を開く</a>
-    </div>
+      <dt class="en">Party</dt>
+      <dd>挙式後、同じ会場の1階で会食（13時頃終了）</dd>
 
-    <div class="detail">
-      <p class="detail__label en">Reception</p>
-      <p class="detail__body"><strong>挙式後　会食</strong></p>
-      <p class="detail__note">同じ会場の1階にて<br>13時頃に終了の予定です</p>
-    </div>
-
-    <div class="detail">
-      <p class="detail__label en">Dress Code</p>
-      <p class="detail__body"><strong>平服でお越しください</strong></p>
-    </div>
+      <dt class="en">Dress</dt>
+      <dd>平服でお越しください</dd>
+    </dl>
   </div>
 </section>
 
-<section class="sec notes">
-  <div class="wrap reveal">
-    <div class="sec__head">
-      <span class="sec__en">Notes</span>
-      <h2 class="sec__ja">お願い</h2>
-    </div>
-
-    <div class="note">
-      <p class="note__title">ご祝儀について</p>
-      <p class="note__text">ご祝儀やお祝いのお品は不要です。皆さまには、準備が守られるようお祈りに覚えていただけますと幸いです。</p>
-    </div>
-
-    <div class="note">
-      <p class="note__title">お車でお越しの方へ</p>
-      <p class="note__text">駐車場に限りがございます。恐れ入りますが、可能な方は乗り合わせでお越しいただけますと助かります。お返事の際に、お車の台数をお知らせください。</p>
-    </div>
-
-    <div class="note">
-      <p class="note__title">お食事について</p>
-      <p class="note__text">会食のお料理は教会の皆さまの手作りです。食物アレルギーや苦手な食べ物がございましたら、お返事の際にお知らせください。</p>
-    </div>
+<section class="notes">
+  <div class="wrap">
+    <ul>
+      <li><b>ご祝儀やお祝いのお品は不要です。</b>皆さまには、準備が守られるようお祈りに覚えていただけますと幸いです。</li>
+      <li><b>駐車場に限りがございます。</b>可能な方は乗り合わせでお越しいただけますと助かります。台数はお返事の際にお知らせください。</li>
+      <li><b>お料理は教会の皆さまの手作りです。</b>食物アレルギーや苦手な食べ物がございましたら、お返事の際にお知らせください。</li>
+    </ul>
   </div>
 </section>
 
-<section class="sec rsvp" id="rsvp">
-  <div class="wrap reveal">
+<section class="rsvp" id="rsvp">
+  <div class="wrap">
     <div class="sec__head">
       <span class="sec__en">R.S.V.P.</span>
       <h2 class="sec__ja">出欠のお返事</h2>
     </div>
-    <p class="rsvp__lead">お手数ですが、下記よりご回答をお願いいたします。</p>
     <p class="rsvp__deadline">ご返信期限　2026年9月10日（木）</p>
     <div class="rsvp__frame">
-      <div class="rsvp__placeholder">回答フォームを準備しています。<br>まもなくこちらからご回答いただけます。</div>
+      <div class="rsvp__placeholder">回答フォームを準備しています。</div>
     </div>
   </div>
 </section>
@@ -356,21 +295,9 @@ footer{
 <footer>
   <div class="wrap">
     <p class="footer__names en">Makito &amp; Lilis</p>
-    <p class="footer__text">皆さまとご一緒できますことを<br>心より楽しみにしております</p>
+    <p class="footer__text">皆さまとご一緒できますことを心より楽しみにしております</p>
   </div>
 </footer>
-
-<script>
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) {
-      e.target.classList.add('is-in');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-</script>
 
 </body>
 </html>
