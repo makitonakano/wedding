@@ -40,13 +40,13 @@ body{
 .wrap{width:min(600px,88vw);margin-inline:auto}
 
 .hero{
-  min-height:min(74svh,560px);
+  min-height:min(56svh,440px);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:52px 0 44px;
+  padding:40px 0 36px;
   background:
     radial-gradient(ellipse 90% 55% at 50% 0%, var(--peach-pale), transparent 72%),
     var(--paper);
@@ -56,7 +56,7 @@ body{
   letter-spacing:.24em;
   color:var(--accent);
   text-transform:uppercase;
-  margin-bottom:26px;
+  margin-bottom:20px;
 }
 .hero__name{
   display:block;
@@ -78,8 +78,8 @@ body{
   line-height:1.9;
 }
 .hero__date{
-  margin-top:30px;
-  padding-top:24px;
+  margin-top:22px;
+  padding-top:20px;
   border-top:1px solid var(--line);
   font-size:clamp(1.9rem,7.5vw,2.6rem);
   color:var(--navy);
@@ -92,10 +92,10 @@ body{
   color:var(--ink-soft);
 }
 
-section{padding:52px 0;border-top:1px solid var(--line)}
+section{padding:40px 0;border-top:1px solid var(--line)}
 .sec__head{
   text-align:center;
-  margin-bottom:30px;
+  margin-bottom:24px;
 }
 .sec__en{
   display:block;
@@ -115,40 +115,37 @@ section{padding:52px 0;border-top:1px solid var(--line)}
 .greeting p{font-size:1.02rem;line-height:2}
 .greeting p + p{margin-top:1.1em}
 .greeting__sign{
-  margin-top:26px;
+  margin-top:24px;
   text-align:right;
   color:var(--navy);
   font-weight:600;
+  line-height:1.7;
 }
+.greeting__sign span{display:block;white-space:nowrap}
 
-.info{
-  display:grid;
-  grid-template-columns:auto 1fr;
-  align-items:baseline;
+.row{
+  border-top:1px solid var(--line);
+  padding:14px 0;
 }
-.info dt{
-  padding-right:22px;
-  font-size:.9rem;
+.row:first-child{border-top:none;padding-top:0}
+.row dt{
+  font-size:.86rem;
   letter-spacing:.12em;
   color:var(--accent);
-  padding:14px 0;
-  border-top:1px solid var(--line);
+  margin-bottom:2px;
   white-space:nowrap;
 }
-.info dd{
-  padding:14px 0;
-  border-top:1px solid var(--line);
+.row dd{
   font-size:1.02rem;
   line-height:1.8;
 }
-.info dt:first-of-type,.info dd:first-of-type{border-top:none;padding-top:0}
-.info strong{
+.row strong{
   display:block;
   font-weight:600;
   color:var(--navy);
   font-size:1.1rem;
 }
-.info small{
+.row small{
   display:block;
   font-size:.92rem;
   color:var(--ink-soft);
@@ -172,7 +169,7 @@ section{padding:52px 0;border-top:1px solid var(--line)}
   padding-left:1.1em;
   position:relative;
 }
-.notes li + li{margin-top:14px}
+.notes li + li{margin-top:12px}
 .notes li::before{
   content:"−";
   position:absolute;
@@ -204,7 +201,7 @@ section{padding:52px 0;border-top:1px solid var(--line)}
 
 footer{
   border-top:1px solid var(--line);
-  padding:36px 0 44px;
+  padding:32px 0 40px;
   text-align:center;
 }
 .footer__names{
@@ -215,7 +212,9 @@ footer{
 .footer__text{font-size:.92rem;color:var(--ink-soft);line-height:1.9}
 
 @media (min-width:560px){
-  .info{grid-template-columns:108px 1fr}
+  section{padding:52px 0}
+  .row{display:grid;grid-template-columns:104px 1fr;align-items:baseline}
+  .row dt{margin-bottom:0}
 }
 </style>
 </head>
@@ -238,7 +237,7 @@ footer{
   <div class="wrap greeting">
     <p>主の御名を賛美いたします。</p>
     <p>このたび、2026年10月10日（土）に結婚式を挙げる運びとなりました。これまでお祈りとお支えをいただきましたこと、心より感謝申し上げます。ささやかな式ではございますが、ぜひご列席いただきたく、ご案内申し上げます。</p>
-    <p class="greeting__sign">中野 真喜人　／　リリス オクタヴィナ シナガ</p>
+    <p class="greeting__sign"><span>中野 真喜人</span><span>リリス オクタヴィナ シナガ</span></p>
   </div>
 </section>
 
@@ -249,24 +248,32 @@ footer{
       <h2 class="sec__ja">ご案内</h2>
     </div>
     <dl class="info">
-      <dt class="en">Date</dt>
-      <dd>
-        <strong>2026年10月10日（土）</strong>
-        <small>受付 9:30 ／ 開式 10:00</small>
-      </dd>
+      <div class="row">
+        <dt class="en">Date</dt>
+        <dd>
+          <strong>2026年10月10日（土）</strong>
+          <small>受付 9:30 ／ 開式 10:00</small>
+        </dd>
+      </div>
 
-      <dt class="en">Venue</dt>
-      <dd>
-        <strong>インドネシア福音教会（GIII）南茨城</strong>
-        <small>茨城県常総市水海道高野町430</small>
-        <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%B8%B8%E7%B7%8F%E5%B8%82%E6%B0%B4%E6%B5%B7%E9%81%93%E9%AB%98%E9%87%8E%E7%94%BA430" target="_blank" rel="noopener">地図を開く</a>
-      </dd>
+      <div class="row">
+        <dt class="en">Venue</dt>
+        <dd>
+          <strong>インドネシア福音教会（GIII）南茨城</strong>
+          <small>茨城県常総市水海道高野町430</small>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%B8%B8%E7%B7%8F%E5%B8%82%E6%B0%B4%E6%B5%B7%E9%81%93%E9%AB%98%E9%87%8E%E7%94%BA430" target="_blank" rel="noopener">地図を開く</a>
+        </dd>
+      </div>
 
-      <dt class="en">Party</dt>
-      <dd>挙式後、同じ会場の1階で会食（13時頃終了）</dd>
+      <div class="row">
+        <dt class="en">Party</dt>
+        <dd>挙式後、同じ会場の1階で会食（13時頃終了）</dd>
+      </div>
 
-      <dt class="en">Dress</dt>
-      <dd>平服でお越しください</dd>
+      <div class="row">
+        <dt class="en">Dress</dt>
+        <dd>平服でお越しください</dd>
+      </div>
     </dl>
   </div>
 </section>
