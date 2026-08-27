@@ -45,24 +45,21 @@ body{
 }
 .wrap{width:min(600px,86vw);margin-inline:auto;position:relative;z-index:1}
 
-.botanical{
+.floral{
   position:absolute;
   pointer-events:none;
+  user-select:none;
   z-index:0;
-  opacity:1;
 }
-.botanical svg{display:block;width:100%;height:auto}
-.botanical--tl{top:-6px;left:-10px;width:clamp(155px,40vw,240px)}
-.botanical--br{bottom:-4px;right:-8px;width:clamp(135px,33vw,205px);transform:rotate(180deg)}
+.floral--tl{top:0;left:0;width:clamp(170px,46vw,280px)}
+.floral--br{bottom:0;right:0;width:clamp(140px,38vw,230px)}
 .hero{
   position:relative;
-  min-height:min(62svh,480px);
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
   text-align:center;
-  padding:76px 0 38px;
+  padding:clamp(92px,24vw,150px) 0 44px;
   background:radial-gradient(ellipse 92% 58% at 50% 0%, var(--peach-pale), transparent 74%);
 }
 .arch{
@@ -83,8 +80,8 @@ body{
   opacity:.55;
 }
 .hero__label{
-  font-size:.86rem;
-  letter-spacing:.24em;
+  font-size:.78rem;
+  letter-spacing:.2em;
   color:var(--accent);
   text-transform:uppercase;
 }
@@ -96,7 +93,7 @@ body{
 }
 .hero__name{
   display:block;
-  font-size:clamp(1.7rem,6.4vw,2.5rem);
+  font-size:clamp(1.65rem,6.2vw,2.5rem);
   font-weight:600;
   color:var(--navy);
   line-height:1.25;
@@ -240,13 +237,13 @@ section{position:relative;padding:40px 0;border-top:1px solid var(--line)}
 footer{
   position:relative;
   border-top:1px solid var(--line);
-  padding:32px 0 96px;
+  padding:36px 0 150px;
   text-align:center;
 }
 .footer__names{font-size:1.35rem;color:var(--navy);margin-bottom:8px}
 .footer__text{font-size:.92rem;color:var(--ink-soft);line-height:1.9}
 footer .ornament{margin:0 auto 14px;width:80px}
-footer .wrap{width:min(430px,70vw)}
+footer .wrap{width:min(430px,62vw);margin-left:clamp(14px,8vw,auto)}
 
 @media (min-width:560px){
   section{padding:52px 0}
@@ -257,30 +254,11 @@ footer .wrap{width:min(430px,70vw)}
 </head>
 <body>
 
+<img class="floral floral--tl" src="floral-tl.png" alt="" aria-hidden="true">
+<img class="floral floral--br" src="floral-br.png" alt="" aria-hidden="true">
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <radialGradient id="gPetal" cx="50%" cy="78%" r="72%">
-<stop offset="0%" stop-color="#fbeee8"/><stop offset="55%" stop-color="#f2d6c8"/><stop offset="100%" stop-color="#e0ab92"/>
-</radialGradient>
-<radialGradient id="gLeaf" cx="42%" cy="50%" r="70%">
-<stop offset="0%" stop-color="#d3dac9"/><stop offset="100%" stop-color="#a6b399"/>
-</radialGradient>
-<linearGradient id="gFrond" x1="0" y1="1" x2="1" y2="0">
-<stop offset="0%" stop-color="#e5d6c2"/><stop offset="100%" stop-color="#cdb79c"/>
-</linearGradient><g id="frond" fill="url(#gFrond)" fill-opacity=".42"><path d="M0 0 Q52 -14 96 -74" fill="none" stroke="#cdb79c" stroke-width=".9" stroke-linecap="round" opacity=".45"/><ellipse cx="18.1" cy="-11.5" rx="10.7" ry="1.7" transform="rotate(-52 18.1 -11.5)"/><ellipse cx="21.6" cy="-2.2" rx="10.7" ry="1.7" transform="rotate(10 21.6 -2.2)"/><ellipse cx="23.5" cy="-13.9" rx="10.3" ry="1.7" transform="rotate(-55 23.5 -13.9)"/><ellipse cx="27.3" cy="-5.2" rx="10.3" ry="1.7" transform="rotate(7 27.3 -5.2)"/><ellipse cx="28.8" cy="-16.6" rx="9.9" ry="1.6" transform="rotate(-57 28.8 -16.6)"/><ellipse cx="32.9" cy="-8.4" rx="9.9" ry="1.6" transform="rotate(5 32.9 -8.4)"/><ellipse cx="34.1" cy="-19.6" rx="9.4" ry="1.6" transform="rotate(-60 34.1 -19.6)"/><ellipse cx="38.4" cy="-11.9" rx="9.4" ry="1.6" transform="rotate(2 38.4 -11.9)"/><ellipse cx="39.4" cy="-22.8" rx="9.0" ry="1.5" transform="rotate(-63 39.4 -22.8)"/><ellipse cx="43.8" cy="-15.7" rx="9.0" ry="1.5" transform="rotate(-1 43.8 -15.7)"/><ellipse cx="44.7" cy="-26.3" rx="8.5" ry="1.5" transform="rotate(-65 44.7 -26.3)"/><ellipse cx="49.1" cy="-19.7" rx="8.5" ry="1.5" transform="rotate(-3 49.1 -19.7)"/><ellipse cx="49.9" cy="-30.0" rx="8.0" ry="1.4" transform="rotate(-67 49.9 -30.0)"/><ellipse cx="54.3" cy="-24.1" rx="8.0" ry="1.4" transform="rotate(-5 54.3 -24.1)"/><ellipse cx="55.2" cy="-34.1" rx="7.5" ry="1.3" transform="rotate(-70 55.2 -34.1)"/><ellipse cx="59.5" cy="-28.6" rx="7.5" ry="1.3" transform="rotate(-8 59.5 -28.6)"/><ellipse cx="60.4" cy="-38.4" rx="7.0" ry="1.3" transform="rotate(-72 60.4 -38.4)"/><ellipse cx="64.6" cy="-33.5" rx="7.0" ry="1.3" transform="rotate(-10 64.6 -33.5)"/><ellipse cx="65.6" cy="-43.0" rx="6.5" ry="1.2" transform="rotate(-74 65.6 -43.0)"/><ellipse cx="69.7" cy="-38.6" rx="6.5" ry="1.2" transform="rotate(-12 69.7 -38.6)"/><ellipse cx="70.7" cy="-47.9" rx="6.0" ry="1.2" transform="rotate(-76 70.7 -47.9)"/><ellipse cx="74.6" cy="-44.0" rx="6.0" ry="1.2" transform="rotate(-14 74.6 -44.0)"/><ellipse cx="75.9" cy="-53.1" rx="5.4" ry="1.1" transform="rotate(-78 75.9 -53.1)"/><ellipse cx="79.5" cy="-49.7" rx="5.4" ry="1.1" transform="rotate(-16 79.5 -49.7)"/><ellipse cx="81.0" cy="-58.5" rx="4.8" ry="1.0" transform="rotate(-80 81.0 -58.5)"/><ellipse cx="84.4" cy="-55.6" rx="4.8" ry="1.0" transform="rotate(-18 84.4 -55.6)"/><ellipse cx="86.1" cy="-64.3" rx="4.2" ry="1.0" transform="rotate(-82 86.1 -64.3)"/><ellipse cx="89.1" cy="-61.8" rx="4.2" ry="1.0" transform="rotate(-20 89.1 -61.8)"/><ellipse cx="91.2" cy="-70.3" rx="3.5" ry="0.9" transform="rotate(-83 91.2 -70.3)"/><ellipse cx="93.8" cy="-68.2" rx="3.5" ry="0.9" transform="rotate(-21 93.8 -68.2)"/></g><g id="leafbranch" fill="url(#gLeaf)" fill-opacity=".46"><path d="M0 0 Q44 -6 88 -50" fill="none" stroke="#a9b89e" stroke-width="1" stroke-linecap="round" opacity=".55"/><ellipse cx="14.6" cy="-10.8" rx="9.4" ry="6.0" transform="rotate(-68 14.6 -10.8)"/><ellipse cx="18.2" cy="4.0" rx="9.4" ry="6.0" transform="rotate(40 18.2 4.0)"/><ellipse cx="24.6" cy="-14.0" rx="9.0" ry="5.7" transform="rotate(-73 24.6 -14.0)"/><ellipse cx="29.4" cy="-0.3" rx="9.0" ry="5.7" transform="rotate(35 29.4 -0.3)"/><ellipse cx="34.7" cy="-18.2" rx="8.5" ry="5.4" transform="rotate(-79 34.7 -18.2)"/><ellipse cx="40.4" cy="-5.7" rx="8.5" ry="5.4" transform="rotate(29 40.4 -5.7)"/><ellipse cx="44.9" cy="-23.5" rx="8.0" ry="5.1" transform="rotate(-84 44.9 -23.5)"/><ellipse cx="51.3" cy="-12.2" rx="8.0" ry="5.1" transform="rotate(24 51.3 -12.2)"/><ellipse cx="55.3" cy="-29.8" rx="7.5" ry="4.8" transform="rotate(-88 55.3 -29.8)"/><ellipse cx="62.0" cy="-19.8" rx="7.5" ry="4.8" transform="rotate(20 62.0 -19.8)"/><ellipse cx="65.8" cy="-37.2" rx="6.8" ry="4.4" transform="rotate(-92 65.8 -37.2)"/><ellipse cx="72.6" cy="-28.5" rx="6.8" ry="4.4" transform="rotate(16 72.6 -28.5)"/><ellipse cx="76.4" cy="-45.5" rx="6.0" ry="3.9" transform="rotate(-96 76.4 -45.5)"/><ellipse cx="82.8" cy="-38.3" rx="6.0" ry="3.9" transform="rotate(12 82.8 -38.3)"/></g><g id="berry" fill="#d3b99e" fill-opacity=".6"><path d="M0 0 Q36 -12 70 -56" fill="none" stroke="#c6ab90" stroke-width=".8" opacity=".5"/><path d="M22.8 -11.0 Q29.1 -10.9 35.4 -4.9" fill="none" stroke="#c6ab90" stroke-width=".7" opacity=".5"/><circle cx="35.4" cy="-4.9" r="3.1"/><path d="M34.1 -18.9 Q33.4 -28.9 32.6 -32.8" fill="none" stroke="#c6ab90" stroke-width=".7" opacity=".5"/><circle cx="32.6" cy="-32.8" r="3.1"/><path d="M45.3 -28.5 Q52.0 -29.7 58.8 -24.9" fill="none" stroke="#c6ab90" stroke-width=".7" opacity=".5"/><circle cx="58.8" cy="-24.9" r="3.1"/><path d="M56.3 -39.7 Q54.4 -49.4 52.6 -53.2" fill="none" stroke="#c6ab90" stroke-width=".7" opacity=".5"/><circle cx="52.6" cy="-53.2" r="3.1"/><circle cx="70.0" cy="-56.0" r="3.3"/></g><g id="bloom"><g fill="url(#gPetal)" fill-opacity=".62" stroke="#dda98d" stroke-opacity=".28" stroke-width=".7"><ellipse rx="11.5" ry="19" cy="-15" transform="rotate(0.0)"/><ellipse rx="11.5" ry="19" cy="-15" transform="rotate(51.4)"/><ellipse rx="11.5" ry="19" cy="-15" transform="rotate(102.9)"/><ellipse rx="11.5" ry="19" cy="-15" transform="rotate(154.3)"/><ellipse rx="11.5" ry="19" cy="-15" transform="rotate(205.7)"/><ellipse rx="11.5" ry="19" cy="-15" transform="rotate(257.1)"/><ellipse rx="11.5" ry="19" cy="-15" transform="rotate(308.6)"/></g><g fill="url(#gPetal)" fill-opacity=".5"><ellipse rx="6.6" ry="10.5" cy="-8.5" transform="rotate(26)"/><ellipse rx="6.6" ry="10.5" cy="-8.5" transform="rotate(86)"/><ellipse rx="6.6" ry="10.5" cy="-8.5" transform="rotate(146)"/><ellipse rx="6.6" ry="10.5" cy="-8.5" transform="rotate(206)"/><ellipse rx="6.6" ry="10.5" cy="-8.5" transform="rotate(266)"/><ellipse rx="6.6" ry="10.5" cy="-8.5" transform="rotate(326)"/></g><g fill="#b98358" fill-opacity=".5"><circle cx="3.2" cy="0.0" r="1.1"/><circle cx="2.5" cy="2.1" r="1.1"/><circle cx="0.6" cy="3.2" r="1.1"/><circle cx="-1.6" cy="2.8" r="1.1"/><circle cx="-3.0" cy="1.1" r="1.1"/><circle cx="-3.0" cy="-1.1" r="1.1"/><circle cx="-1.6" cy="-2.8" r="1.1"/><circle cx="0.6" cy="-3.2" r="1.1"/><circle cx="2.5" cy="-2.1" r="1.1"/><circle r="1.9" fill-opacity=".45"/></g></g><g id="cluster"><g transform="translate(22,14)">
-<g><use href="#frond" transform="rotate(62) scale(1.55)"/>
-<use href="#frond" transform="rotate(88) scale(1.3)"/>
-<use href="#frond" transform="rotate(108) scale(1.05)"/>
-<use href="#frond" transform="rotate(38) scale(1.1)"/></g>
-<g><use href="#leafbranch" transform="rotate(44) scale(1.45)"/>
-<use href="#leafbranch" transform="rotate(70) scale(1.3)"/>
-<use href="#leafbranch" transform="rotate(96) scale(1.1)"/>
-<use href="#leafbranch" transform="rotate(120) scale(.88)"/></g>
-<use href="#berry" transform="rotate(54) scale(1.15)"/>
-<use href="#bloom" transform="translate(38,88) scale(1.32)"/>
-<use href="#bloom" transform="translate(104,40) scale(.72)"/>
-<use href="#bloom" transform="translate(30,172) scale(.64)"/>
-</g></g>
     <g id="sprigmini">
       <path d="M60 14 C 46 14, 34 10, 22 3" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
       <path d="M60 14 C 74 14, 86 10, 98 3" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
@@ -294,13 +272,6 @@ footer .wrap{width:min(430px,70vw)}
     </g>
   </defs>
 </svg>
-
-<div class="botanical botanical--tl" aria-hidden="true">
-  <svg viewBox="0 0 200 290"><use href="#cluster"/></svg>
-</div>
-<div class="botanical botanical--br" aria-hidden="true">
-  <svg viewBox="0 0 200 290"><use href="#cluster"/></svg>
-</div>
 
 <header class="hero">
   <div class="arch" aria-hidden="true"></div>
