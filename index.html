@@ -49,7 +49,7 @@ body{
   position:absolute;
   width:clamp(190px,54vw,340px);
   pointer-events:none;
-  z-index:3;
+  z-index:0;
   opacity:.8;
 }
 .botanical--tl{top:-6px;left:-12px}
@@ -65,9 +65,7 @@ body{
   justify-content:center;
   text-align:center;
   padding:76px 0 38px;
-  background:
-    radial-gradient(ellipse 92% 58% at 50% 0%, var(--peach-pale), transparent 74%),
-    var(--paper);
+  background:radial-gradient(ellipse 92% 58% at 50% 0%, var(--peach-pale), transparent 74%);
 }
 .arch{
   position:absolute;
@@ -243,7 +241,7 @@ section{position:relative;padding:40px 0;border-top:1px solid var(--line)}
 footer{
   position:relative;
   border-top:1px solid var(--line);
-  padding:32px 0 44px;
+  padding:32px 0 72px;
   text-align:center;
 }
 .footer__names{font-size:1.35rem;color:var(--navy);margin-bottom:8px}
